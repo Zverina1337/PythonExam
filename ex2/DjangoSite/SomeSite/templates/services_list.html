@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Контакты{% endblock %}
+{% block content %}
+    {% for service in services %}
+    <div>
+        <h1>{{ service.title }}</h1>
+        <p>{{ service.desc }}</p>
+        <img src="{{ service.img.url }}" alt="">
+    </div>
+    {% endfor %}
+{% endblock %}
